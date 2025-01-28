@@ -1,0 +1,28 @@
+# --- Ignore : R execution ----
+
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# --- Ignore : Local path to data source and output (specific to each user) ---
+
+local_path_not_shared.R
+
+# --- Ignore : Output, if any (tables, graphs ...) ---
+
+*.html
+*.pdf
+*.rds
+*.csv
+*.xlsx
+
+# --- We keep : dictionary files + Eurostat's PDF documentation ---
+
+!bridge_a64_to_AEA_uk.xlsx
+!CRF_allocation_to_NACE.xlsx
+!HH_global_coeff.xlsx
+!HH_residential_coeff_CRF_1A4.xlsx
+!nomenclatures.xlsx
+
+!Methodological_Note_GHG_estimates_FIGARO.pdf

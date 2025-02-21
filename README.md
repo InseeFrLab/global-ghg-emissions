@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Building global Air Emission Accounts (AEAs) compatible with FIGARO
 
 The aim of this project is to estimate global "Air Emission Accounts" (=
@@ -29,7 +23,7 @@ in the following paper :
 (the PDF included in the GIT repo for reference, in case the link above
 is broken)
 
-The inputs needed are all freely available :
+The inputs needed are all available online :
 
 -   The EDGAR database
 
@@ -46,6 +40,13 @@ The inputs needed are all freely available :
 
 The GIT repo does not include these source files, but includes text
 instructions on how to download the sources.
+
+Regarding the use of the EDGAR database, lease note that for non-European countries,
+EDGAR uses data from IEA Greenhouse Gas Emissions from Energy (http://www.iea.org/data-and-statistics),
+as modified by the Joint Research Centre, licensed under CC BY-NC-ND 4.0.
+Users of the EDGAR data for those countries should contact the IEA at compliance@iea.org
+if they wish to use them outside the terms of the CC-BY-NC-ND 4.0 licence,
+in particular if they wish to use them for commercial purposes.
 
 After the user has downloaded the sources and placed them in the
 suitable directories, the scripts go as follows :
@@ -99,11 +100,12 @@ between the two estimates.
 We can draw several lessons from the replication of Eurostat's
 methodology :
 
--   Services (from NACE I to U) receive most of their emissions from
+-   Services (NACE I to U) receive most of their emissions from
     only two IPCC codes ("Residential and other sectors" and "Road
-    transportation"). These also happen to be the two IPCC codes which
+    transportation"). At the begining of the procedure, these two IPCC codes
     are split between households direct emissions and industries
-    emissions. We can therefore conclude that the general level of GHG
+    emissions, using allocation keys which are not always country specific.
+    We can therefore conclude that the general level of GHG
     emissions in NACE services, as well as the distribution between
     services, is somewhat fragile.
 
@@ -147,5 +149,5 @@ emission vectors with more industries, particularly in :
 
 -   mining and quarrying
 
-This extension would require the use of additional information, not
-found in EDGAR or FIGARO.
+Contrary to the previous one, this extension would require the use of
+additional information, not currently found in EDGAR or FIGARO.

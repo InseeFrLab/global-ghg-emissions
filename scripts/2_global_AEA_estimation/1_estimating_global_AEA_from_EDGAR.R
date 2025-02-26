@@ -115,7 +115,7 @@ df_edgar_HH_vs_industries <- df_edgar_emissions %>%
 df_edgar_HH_vs_industries_NA <- df_edgar_HH_vs_industries %>%
   filter(is.na(industries_coeff))
 
-if (nrow(df_edgar_HH_vs_industries_NA) > 0) stop("Table de passage CRF -> NACE / HH incomplete")
+if (nrow(df_edgar_HH_vs_industries_NA) > 0) stop("Bridge table CRF -> NACE / HH incomplete")
 
 # Total HH results
 df_edgar_HH <- df_edgar_HH_vs_industries %>%
@@ -312,7 +312,7 @@ df_incomplete_aea <- df_estimated_aea %>%
 df_complete_eurostat_aea <- df_eurostat_official_aea %>%
   filter(emis_country %in% vc_complete_eurostat_aea,
          time_period %in% vc_estimation_years) %>%
-  #  We put 'U' to zero, as in Eurostat' sur l'empreinte's own estimates
+  #  We put 'U' to zero, as in Eurostat's own estimates
   mutate(ghg_emission = if_else(emis_industry == "U", 0, ghg_emission))
 
 # AEAs fully estimated

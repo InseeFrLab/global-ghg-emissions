@@ -12,7 +12,7 @@ designed by Eurostat to estimate global AEAs starting from the EDGAR
 database. The second phase will aim to build on this work to provide new
 details on the GHG emissions.
 
-## 1. Replication of Eurostat's methodology to estimate global AEAs
+## 1. Replication of Eurostat's methodology to estimate global AEAs based on EDGAR
 
 ### 1.1. How it works
 
@@ -41,7 +41,7 @@ The inputs needed are all available online :
 The GIT repo does not include these source files, but includes text
 instructions on how to download the sources.
 
-Regarding the use of the EDGAR database, lease note that for non-European countries,
+Regarding the use of the EDGAR database, please note that for non-European countries,
 EDGAR uses data from IEA Greenhouse Gas Emissions from Energy (http://www.iea.org/data-and-statistics),
 as modified by the Joint Research Centre, licensed under CC BY-NC-ND 4.0.
 Users of the EDGAR data for those countries should contact the IEA at compliance@iea.org
@@ -115,9 +115,26 @@ methodology :
     re-estimated for each year, although this would of course result in
     more volatile AEAs.
 
-## 2. Possible extensions (to be done)
+## 2. Extensions
 
-### 2.1. New details of CO2 emissions
+### 2.1. Global AEAs based on PRIMAP
+
+To explore the sensitivity of the French footprint to the source choice for global GHG emissions,
+we estimated two variants of the global AEAs, based on alternative sources :
+PRIMAP-CR (for "country reported") and PRIMAP-TP ( for "third party").
+
+Those sources are available in the CRF nomenclature, on a territorial emissions basis.
+In order to build complete AEAs from PRIMAP, we proceed in two steps :
+first, we expand the level of detail of some CRF categories in PRIMAP,
+based on the more detailed structure found in EDGAR; then we apply the Eurostat's methodology
+described in the previous section to convert from the CRF nomenclature to NACE.
+
+To account for international sea and air transport, we use the same sources
+as in the Eurostat's methodology, that is the OECD dedicated databases on CO2 emissions from Air and Sea transport.
+
+## 3. Possible extensions (to be done)
+
+### 3.1. New details of CO2 emissions
 
 Starting from the previous results, the goal would be to break the CO2
 emission vector down in several categories :
@@ -140,7 +157,7 @@ CO2 from energy combustion could be further broken down by fuel type
 (eg. coal, oil products and natural gas), using the IEA world energy
 balances.
 
-### 2.2. New details by industry
+### 3.2. New details by industry
 
 Starting from the previous results, the goal would be to break down the
 emission vectors with more industries, particularly in :

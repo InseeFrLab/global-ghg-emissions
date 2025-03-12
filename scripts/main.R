@@ -36,6 +36,8 @@ clean_global_env()
 source("scripts/1_sources_preprocessing/process_global_AEA_estimated_by_eurostat.R")
 clean_global_env()
 
+source("scripts/1_sources_preprocessing/process_PRIMAP.R")
+clean_global_env()
 
 # 4. Global AEA estimation -----------------------------------------------------
 
@@ -56,3 +58,10 @@ clean_global_env()
 source("scripts/3_tests/comparison_with_eurostat_own_estimates.R")
 clean_global_env()
 
+
+# 7. [Methodological work]  Variant AEAs based on PRIMAP database --------------
+
+source("scripts/4_primap_variant/1_expand_PRIMAP_to_same_CRF_level_of_detail_than_EDGAR.R")
+clean_global_env()
+source("scripts/4_primap_variant/2_estimating_global_AEA_from_PRIMAP.R")
+clean_global_env()

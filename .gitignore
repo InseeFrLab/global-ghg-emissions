@@ -21,6 +21,7 @@ local_path_not_shared.R
 
 !bridge_a64_to_AEA_uk.xlsx
 !CRF_allocation_to_NACE.xlsx
+!CRF_primap_vs_edgar.xlsx
 !HH_global_coeff.xlsx
 !HH_residential_coeff_CRF_1A4.xlsx
 !nomenclatures.xlsx
